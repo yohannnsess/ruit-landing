@@ -1,0 +1,1 @@
+export async function POST(request: Request) { const body = await request.json().catch(() => ({})); if (body.website) return Response.json({ ok: true }); console.log('[Ruit] Contact request', { name: body.name, organization: body.organization, email: body.email, subject: body.subject }); return Response.json({ ok: true }) }
